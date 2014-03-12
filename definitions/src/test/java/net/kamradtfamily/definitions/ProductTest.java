@@ -53,13 +53,6 @@ public class ProductTest {
     
     @AfterClass
     public static void tearDownClass() {
-        EntityManager em = emf.createEntityManager();
-        EntityTransaction trans = em.getTransaction();
-        trans.begin();
-        deleteTestData(em);
-        trans.commit();
-        em.close();
-
         emf.close();
     }
     
@@ -73,7 +66,11 @@ public class ProductTest {
     @After
     public void tearDown() {
         if(trans != null && trans.isActive()) {
-            trans.commit();
+            if(trans.getRollbackOnly()) {
+                trans.rollback();
+            } else {
+                trans.commit();
+            }
         }
         if(em != null && em.isOpen()) {
             em.close();
