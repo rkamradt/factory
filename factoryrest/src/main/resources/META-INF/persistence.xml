@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+  <persistence-unit name="net.kamradtfamily.factory_factoryrest_war_1.0-SNAPSHOTPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>net.kamradtfamily.definitions.Worker</class>
+    <class>net.kamradtfamily.definitions.Product</class>
+    <class>net.kamradtfamily.definitions.MaterialSource</class>
+    <class>net.kamradtfamily.definitions.Material</class>
+    <class>net.kamradtfamily.definitions.Consumer</class>
+    <class>net.kamradtfamily.definitions.Address</class>
+    <class>net.kamradtfamily.definitions.Composite</class>
+    <class>net.kamradtfamily.factory.factoryrest.service.Worker</class>
+    <class>net.kamradtfamily.factory.factoryrest.service.Address</class>
+    <class>net.kamradtfamily.factory.factoryrest.service.Materialsource</class>
+    <class>net.kamradtfamily.factory.factoryrest.service.Consumer</class>
+    <class>net.kamradtfamily.factory.factoryrest.service.Material</class>
+    <class>net.kamradtfamily.factory.factoryrest.service.Composite</class>
+    <class>net.kamradtfamily.factory.factoryrest.service.Product</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/factory?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.user" value="randy"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="randy"/>
+      <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+    </properties>
+  </persistence-unit>
+</persistence>
