@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+  <persistence-unit name="net.kamradtfamily.factory_definitions_jar_1.0-SNAPSHOTPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>net.kamradtfamily.definitions.Worker</class>
+    <class>net.kamradtfamily.definitions.Product</class>
+    <class>net.kamradtfamily.definitions.MaterialSource</class>
+    <class>net.kamradtfamily.definitions.Material</class>
+    <class>net.kamradtfamily.definitions.Consumer</class>
+    <class>net.kamradtfamily.definitions.Address</class>
+    <class>net.kamradtfamily.definitions.Composite</class>
+  </persistence-unit>
+</persistence>
